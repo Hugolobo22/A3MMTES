@@ -1,0 +1,1 @@
+import * as teste from "./teste";
