@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  # Serviço para o banco de dados PostgreSQL
+  db:
+    image: postgres:13
+    container_name: to_Do_List
+    environment:
+      POSTGRES_USER: usuario
+      POSTGRES_PASSWORD: senha
+      POSTGRES_DB: to_Do_List
+    ports:
+      - "5435:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+# Volume para persistir os dados do PostgreSQL
+volumes:
+  postgres_data:
