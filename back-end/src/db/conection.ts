@@ -5,4 +5,4 @@ import postgres from "postgres";
 
 const connection = postgres(process.env.DB_FILE_NAME!);
 
-const db = drizzle(connection, { schema });
+export const db = drizzle(connection, { schema });
